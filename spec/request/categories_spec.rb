@@ -19,7 +19,7 @@ describe 'Categories', type: :request do
         )
       end
 
-      let(:category) { Category.create!(name: "Food #{rand}", icon: 'other.png') }
+      let(:category) { Category.create!(name: "Food #{rand}", icon: 'other.png', user: user) }
 
       before do
         sign_in user
