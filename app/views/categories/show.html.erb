@@ -1,0 +1,29 @@
+<%= render "shared/nav" %>
+
+<div class="transactions-container">
+  <div class="transactions-title">
+    <p class="parr"><%= @category.name %></p>
+    <p class="parr">Total: $<%= @category.expenses.sum(:amount) %></p>
+  </div>
+
+  <% @expenses.each do |expense| %>
+    <div class="transaction-card">
+      <div class="category-icon">
+        <%= image_tag @category.icon, alt: 'icon', class: "icon" %>
+      </div>
+      <div class="card-text">
+        <div class="name-amount">
+          <h4><%= expense.name %></h4>
+          <p class="amount">$<%= expense.amount %></p>
+        </div>
+        <p class="date"><%= expense.created_at.strftime('%d %B, %Y') %></p>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="fixed-button">
+    <%= link_to new_category_expense_path(category_id: @category.id) do %>
+      <button class="btn btn-success but">Add new transaction</button>
+    <% end %>
+  </div>
+</div>

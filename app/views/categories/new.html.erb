@@ -1,0 +1,23 @@
+<%= render "shared/nav" %>
+<h1 class="title">Add New Category</h1>
+
+<div class="form-container">
+<%= form_with model: @category, url: categories_path, local: true do |f| %>
+  <%= f.text_field :name, autofocus: true, placeholder: "Category Name", class:"form-control" %>
+  
+  <div class="form-group">
+    <%= f.label :icon, "Select Icon" %>
+    <%= f.collection_select(:icon, [
+        ['cash.png', 'Savings 💰'],
+        ['hospital.png', 'Medical 👩‍⚕️'],
+        ['store.png', 'Shopping 🏪'],
+        ['sports.png', 'Activity 🏆'],
+        ['beach.png', 'Leisure ⛱️'],
+        ['travel.png', 'Travel 🎫'],
+        ['other.png', 'Others 📝']
+      ], :first, :last, { prompt: 'Select Icon' }, { class: 'form-control' }) %>
+  </div>
+
+  <%= f.submit "Save", class:"btn btn-primary sign-up" %>
+<% end %>
+</div>
