@@ -16,6 +16,12 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def show
+    @category = Category.find(params[:id])
+    @expenses = @category.expenses.order(created_at: :desc)
+    @total = @expenses.sum(:amount)
+  end
+
   private
 
   def category_params

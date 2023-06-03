@@ -12,9 +12,12 @@ class ExpensesController < ApplicationController
   def create
     @expense = Expense.new(expense_params)
     @expense.author = current_user
+
     if @expense.save
-      @expense.categories << @category
-      redirect_to category_expenses_path(@category), notice: 'Expense created successfully'
+      category_ids = params[:expense][:category_ids] || []
+      @expense.categories = Category.where(id: category_ids)
+
+      redirect_to @category, notice: 'Expense created successfully'
     else
       render :new, status: :unprocessable_entity
     end
@@ -27,6 +30,6 @@ class ExpensesController < ApplicationController
   end
 
   def expense_params
-    params.require(:expense).permit(:name, :amount, category_ids: [])
+    params.require(:expense).permit(:name, :amount)
   end
 end

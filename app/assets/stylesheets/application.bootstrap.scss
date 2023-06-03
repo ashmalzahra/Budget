@@ -1,2 +1,322 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+/* Main body */
+body {
+  background-color: #f6f6f6;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sign-up-color {
+  background-color: #3778c2;
+}
+
+.title {
+  text-align: center;
+  margin: 3rem;
+}
+
+.splashtext {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Nav */
+nav {
+  background-color: #3778c2;
+}
+
+.nav-link,
+.navbar-brand {
+  color: #fff;
+  margin-left: 10px;
+}
+
+.navbar-toggler {
+  color: #fff;
+}
+
+/* Splash screen */
+.splash-container {
+  border-radius: 10px;
+  width: 50rem;
+  margin: auto;
+  margin-top: 4rem;
+}
+
+/* logo image size */
+.logo {
+  margin-top: 4rem;
+  width: 40rem;
+}
+
+/* logo image container size */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* sign up links */
+.sign-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subtitle {
+  margin-top: 2rem;
+}
+
+.sign-up-btn-boarder {
+  margin-top: 17rem;
+  margin-bottom: 0.5rem;
+  width: 25rem;
+  height: 6rem;
+  background-color: #3778c2;
+  font-size: 20px;
+  border: none;
+}
+
+/* input error */
+.notice,
+.alert {
+  padding: 0;
+  margin: 0;
+}
+
+/* sign up and login form */
+.form-control {
+  width: 20rem;
+  margin: 10px 0;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actions {
+  text-align: center;
+}
+
+/* Groups/categories */
+.fixed-button,
+.sign-up,
+.log-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* sign up and add button */
+.btn-success {
+  width: 25rem;
+  height: 6rem;
+  background-color: #25a22c;
+  font-size: 20px;
+  border: none;
+}
+
+/* sign up and add button */
+.butt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.get-started {
+  margin: 2rem 1rem 25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Categories Card */
+.categories-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 0;
+}
+
+/* Categories Card */
+.category-card {
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid #e3e2e2;
+  background-color: #fff;
+  width: 25rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 10px;
+  align-items: center;
+  box-shadow: #00000029 0 1px 4px;
+}
+
+/* Categories Card */
+.category-icon {
+  justify-self: center;
+}
+
+/* Categories Card Icon */
+.icon {
+  width: 7rem;
+  height: 7rem;
+}
+
+/* Categories Card */
+.card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Categories Card */
+.top-card,
+.bottom-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-to {
+  margin-top: 2rem;
+}
+
+/* Categories Card Name */
+.category-name {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 22px;
+  color: #48505a;
+}
+
+.learn {
+  font-size: 15px;
+  color: #7b8b9b;
+}
+
+/* user name text size */
+.user {
+  font-size: 12px;
+}
+
+/* transactions container */
+.transactions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* transactions container card */
+.transaction-card {
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid #e3e2e2;
+  background-color: #fff;
+  width: 25rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 10px;
+  align-items: center;
+  box-shadow: #00000029 0 1px 4px;
+}
+
+/* transactions container card Media query */
+@media only screen and (max-width: 600px) {
+  .transaction-card {
+    width: 25rem;
+  }
+
+  /* catagories card */
+  .category-card {
+    width: 25rem;
+  }
+
+  /* splash container */
+  .splash-container {
+    width: 30rem;
+  }
+
+  /* logo width */
+  .logo {
+    width: 18rem;
+  }
+
+  /* date of budget */
+  .date {
+    font-size: 10px;
+  }
+
+  /* fixed success button */
+  .fixed-button {
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* sign up - add button */
+  .btn-success {
+    width: 100vw;
+    height: 6rem;
+    background-color: #25a22c;
+    font-size: 22px;
+    border: none;
+    position: relative;
+  }
+
+  /* button position */
+  .butt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+}
+
+/* transactions title heading */
+.transactions-title {
+  display: flex;
+  padding: 10px;
+  gap: 7rem;
+  border: 2px solid #e3e2e2;
+  background-color: #fff;
+  margin-bottom: 2rem;
+}
+
+.parr {
+  margin: 0;
+}
+
+/* name and amount text size */
+.name-amount {
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* amount text size */
+.amount {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+/* date added text size */
+.date {
+  font-size: 12px;
+  display: flex;
+  justify-content: left;
+}
+
+/* button nudge */
+.but {
+  margin-top: 20rem;
+}
