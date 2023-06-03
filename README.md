@@ -72,7 +72,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://rails-m6h1.onrender.com/)
+- [Live Demo Link](https://budget-n50q.onrender.com/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
