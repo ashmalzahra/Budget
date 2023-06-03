@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = Category.all
+    @categories = current_user.categories
   end
 
   def new
@@ -9,16 +9,18 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new(category_params)
+    @category.user = current_user
     if @category.save
       redirect_to categories_path, notice: 'Category created successfully'
     else
+      puts @category.errors.full_messages # Output validation errors to the console
       render :new, status: :unprocessable_entity
     end
   end
 
   def show
     @category = Category.find(params[:id])
-    @expenses = @category.expenses.order(created_at: :desc)
+    @expenses = @category.expenses.where(author: current_user)
     @total = @expenses.sum(:amount)
   end
 
