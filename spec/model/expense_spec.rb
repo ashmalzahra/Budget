@@ -31,12 +31,12 @@ describe Expense, type: :model do
 
   describe 'associations' do
     it 'has_many category_expenses' do
-        assoc = Expense.reflect_on_association(:category_expenses)
-        expect(assoc.macro).to eq :has_many
-      end
-      it 'has_many categories' do
-        assoc = Expense.reflect_on_association(:categories)
-        expect(assoc.macro).to eq :has_many
-      end
+      assoc = Expense.reflect_on_association(:category_expenses)
+      expect(assoc.macro).to eq :has_many
+    end
+    it 'has_many categories' do
+      assoc = Expense.reflect_on_association(:categories)
+      expect(assoc.macro).to eq :has_many
+    end
   end
 end

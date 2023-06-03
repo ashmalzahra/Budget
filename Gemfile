@@ -38,6 +38,8 @@ gem 'cancancan'
 
 gem 'faker', '~> 3.2'
 
+gem 'rails-controller-testing'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
