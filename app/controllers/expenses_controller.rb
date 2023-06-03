@@ -12,16 +12,16 @@ class ExpensesController < ApplicationController
   def create
     @expense = Expense.new(expense_params)
     @expense.author = current_user
-  
+
     if @expense.save
       category_ids = params[:expense][:category_ids] || []
       @expense.categories = Category.where(id: category_ids)
-  
+
       redirect_to @category, notice: 'Expense created successfully'
     else
       render :new, status: :unprocessable_entity
     end
-  end  
+  end
 
   private
 
